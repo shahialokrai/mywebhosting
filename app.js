@@ -34,8 +34,8 @@ app.use(morgan('dev'))
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
-//const PORT  = process.env.PORT || 27012
-const PORT = 8080
+const PORT  = process.env.PORT || 27012
+//const PORT = 8080
 app.listen(PORT, () => {
     console.log('Server is Running on Port : ' + PORT)
 })

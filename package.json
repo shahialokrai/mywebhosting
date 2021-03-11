@@ -6,7 +6,7 @@
     "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "NIC Arvalli",
+  "author": "NIC PATAN",
   "license": "ISC",
   "dependencies": {
     "adbkit": "^2.11.1",
