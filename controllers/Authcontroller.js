@@ -31,7 +31,7 @@ const register = (req, res, next) => {
                 res.status(400).json({
                     message: 'User with this email already exists.'
                 })
-                console.log(error)
+              //  console.log(error)
             })
     })
 
