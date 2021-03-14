@@ -1,6 +1,8 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const morgan = require('morgan')
+var multer = require('multer')
+var upload = multer()
 const bodyParser = require('body-parser')
 
 const url = 'mongodb+srv://ajay123456:ajay@123@cluster0.8qyzr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
@@ -33,7 +35,8 @@ const app = express()
 app.use(morgan('dev'))
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
-
+app.use(upload.array()) 
+app.use(express.static('public'))
 const PORT  = process.env.PORT || 27012
 //const PORT = 8080
 app.listen(PORT, () => {
