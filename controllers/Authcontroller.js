@@ -56,7 +56,7 @@ const login = (req, res, next) => {
                             error: err
                         })
                     }
-                    if (result) {
+                   else if (result) {
                         let token = jwt.sign({ name: user.name }, config.secret, { expiresIn: '8760h' })
                         res.json({
                             message: 'Login Successful!',
@@ -81,7 +81,7 @@ const login = (req, res, next) => {
 
                 }
             }
-        })
+      })
 }
 
 const logout = (req, res, next) => {
