@@ -46,7 +46,7 @@ const store = (req, res, next) => {
         categorydesc: req.body.categorydesc
 
     })
-        /
+        
 
         category.save()
             .then(response => {
