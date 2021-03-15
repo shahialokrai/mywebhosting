@@ -40,12 +40,12 @@ const register = (req, res, next) => {
 
 const login = (req, res, next) => {
 
-    var username = req.body.username
-    var password = req.body.password
+     var  username = req.body.username
+     var password = req.body.password
     if (validator.validate(username)) { }
 
 
-    User.findOne({ $or: [{ email: username }, { phone: username }] })
+    User.findOne({ $or: [{ email: username },{ phone: username }] })
         .then(user => {
             console.log(user)
 
