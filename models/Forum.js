@@ -1,22 +1,26 @@
-const mongodb = require('mongodb')
-const mongoose = require('mongoose')
-const Schema = mongoose.Schema
-const forumschema = new Schema({
+const mongodb = require("mongodb");
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
+const forumschema = new Schema(
+  {
     forumname: {
-        type: String
+      type: String,
     },
     forumreply: {
-        type: String
+      type: String,
     },
     forumview: {
-        type: Number
+      type: Number,
+    },
+    replycount: {
+      type: Number,
     },
     categoryid: {
-        type: mongoose.Schema.ObjectId,
-        ref: 'Category'
-    }
+      type: mongoose.Schema.ObjectId,
+      ref: "Category",
+    },
+  },
+  { timestamps: true }
+);
 
-}, { timestamps: true })
-
-module.exports = mongoose.model('Forum', forumschema)
-
+module.exports = mongoose.model("Forum", forumschema);
